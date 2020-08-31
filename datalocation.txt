@@ -1,0 +1,23 @@
+Data was from AWS Data Exchange. https://console.aws.amazon.com/dataexchange/home?region=us-east-1#/subscriptions/prod-qcgfvl5bxmrnm
+This is data from Kochava Collective (https://www.kochava.com/) and was provided free to individuals working on projects relating to Covid-19.
+
+Throughout the project, I was in contact with Garrett MacDonald at Kochava, who was very helpful with information related to the data.
+
+This data set contains precision latitude/longitude coordinates for mobile devices with global geographic coverage. Each revision to the data set contains one day's worth of processed precision geo data. Data is provided via the Kochava Collective's SDK based GPS mobile device location footprint.
+
+
+Data Dictionary/Contents:
+
+sha1_device_id_value VARCHAR(40),
+device_id_type VARCHAR(4),
+activity_datetime TIMESTAMP,
+latitude NUMERIC(9,6),
+longitude NUMERIC(9,6),
+horizontal_accuracy DOUBLE PRECISION,
+ip_address VARCHAR(40),
+country_code CHAR(2),
+country_name VARCHAR(256),
+geo_hash VARCHAR(12),
+consent VARCHAR(12)
+
+For the sake of the project, I used a single day's worth of data. I imported this single data set into S3 using AWS Glue.
